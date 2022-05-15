@@ -1,38 +1,84 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Trending Coins Carousel Style */
+.trending-coin {
+  text-decoration: none;
+  text-align: center;
+  width: 5rem;
+}
+
+.trending-coin-name {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Coins Table Style */
+table {
+  text-align: center !important;
+}
+
+table i {
+  font-size: 2rem;
+}
+
+/* Single Coin Page Style */
+.coin-image {
+  margin: 0 auto;
+}
+
+.coin-image img {
+  transition: all 0.5s ease-in-out;
+  animation: rotate 5s linear infinite;
+}
+
+.coin-name {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.coin-description {
+  text-align: justify;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Page Not Found Style */
+.page-not-found-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.page-not-found-image {
+  max-width: 40%;
 }
 
-@keyframes App-logo-spin {
+.page-not-found-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Coin Image Rotate Animation */
+@keyframes rotate {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-not-found-image {
+    max-width: 100%;
   }
 }
